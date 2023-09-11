@@ -4,8 +4,8 @@ type Props = {
     title?:string;
 }
 
-/* import { ViewTransitions } from "astro:transitions";
- *//* import Navbar from "@components/shared/navbar.astro"; */
+import { ViewTransitions } from "astro:transitions";
+import Navbar from "@components/shared/navbar.astro"; 
 import "@styles/global.css";
 const { title,dark=false } = Astro.props;
 ---
@@ -19,8 +19,8 @@ const { title,dark=false } = Astro.props;
         <title>{title}</title>
     </head>
     <body class="flex justify-center flex-col items-center">
-<!--         <ViewTransitions transition:animate={"initial"} />
- --><!--         <Navbar dark={dark} /> -->
+         <ViewTransitions transition:animate={"initial"} />
+          <Navbar dark={dark} /> 
         <slot />
     </body>
 </html>
