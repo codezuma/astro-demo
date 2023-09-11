@@ -1,5 +1,5 @@
 ---
-import Faq from "../shared/faq.astroaq.svelte";
+import Faq from "@components/shared/faq.astro";
 let faqs = [
     {
       question: 'What is Svelte?',
@@ -23,6 +23,6 @@ let faqs = [
     </header>
     <div class="w-full md:w-3/5 mx-auto">
 
-      {faqs.map(faq=><Faq {question}={faq.question} {answer}={faq.answer} client:only="svelte"/>    )}
+      {faqs.map(faq=><Faq question={faq.question} answer={faq.answer} />    )}
     </div>
 </section>
